@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "projects": {
+    "colorparser": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/colorparser",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "aot": true
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "colorparser:build"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "colorparser",
+  "cli": {
+    "analytics": "c8e4bf12-30e8-44d6-a4a2-772b8816b573"
+  }
+}
