@@ -33,10 +33,7 @@ export class AppComponent implements OnInit {
     manufactores: Manufacturer[] = [];
     constructor(private http: HttpClient,private readonly sanitizer: DomSanitizer){}
       
-    ngOnInit(){
-       
-        // this.http.get('http://localhost:4300/index').subscribe((data:User[]) => this.users = data);
-        //this.http.get('http://localhost:4300/index').subscribe((data:Glue[]) => this.glues = data);
+    ngOnInit(){     
         this.http.get('http://localhost:4300/index').subscribe((data:Manufacturer[]) => this.manufactores = data);
     }
 
